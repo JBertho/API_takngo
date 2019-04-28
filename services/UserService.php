@@ -39,7 +39,20 @@ class UserService
         ]);
 
         if($res){
-            echo User::UserFromArray($res)->jsonSerialize();
+            //echo User::UserFromArray($res)->jsonSerialize();
+            return User::UserFromArray($res);
+        }
+        return NULL;
+    }
+
+    public function getConnexionUser($email, $password)
+    {
+        $manager = DatabaseManager::getManager();
+        $res = $manager->findOne('SELECT * FROM user WHERE email = ? and password = ?', [
+            $email,$password
+        ]);
+        if($res){
+            //echo User::UserFromArray($res)->jsonSerialize();
             return User::UserFromArray($res);
         }
         return NULL;

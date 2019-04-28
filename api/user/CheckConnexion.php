@@ -3,24 +3,20 @@
  * Created by IntelliJ IDEA.
  * User: James
  * Date: 28/04/2019
- * Time: 14:09
+ * Time: 16:21
  */
-
 header('Content-Type: application/json');
 require_once __DIR__.'/../../services/UserService.php';
 require_once __DIR__.'/../../utils/validator.php';
 
-$body = file_get_contents('php://input');//lecture du body en chaine de car
-$json = json_decode($body,true); //true -> decode as array
+if (isset($_GET['email']) and isset($_GET['password'])){
 
-print_r($json);
-if (Validator::validate($json,['id'])){
-
-    $user = UserService::getInstance()->getById($json['id']);
+    $user = UserService::getInstance()->getConnexionUser($_GET['email'],$_GET['password']);
     if ($user){
         http_response_code(201);
         echo json_encode($user);
     }else{
         http_response_code(500);
     }
+
 }
