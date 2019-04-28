@@ -14,9 +14,9 @@ $body = file_get_contents('php://input');//lecture du body en chaine de car
 $json = json_decode($body,true); //true -> decode as array
 
 print_r($json);
-if (Validator::validate($json,['id'])){
+if (isset($_GET['id'])){
 
-    $product = ProductService::getInstance()->getById($json['id']);
+    $product = ProductService::getInstance()->getById($_GET['id']);
     if ($product){
         http_response_code(201);
         echo json_encode($product);

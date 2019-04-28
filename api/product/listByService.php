@@ -12,8 +12,8 @@ require_once __DIR__.'/../../utils/validator.php';
 $body = file_get_contents('php://input');//lecture du body en chaine de car
 $json = json_decode($body,true); //true -> decode as array
 
-if (Validator::validate($json,['id'])){
-    $products = ProductService::getInstance()->allProductByService($json['id']);
+if (isset($_GET['id'])){
+    $products = ProductService::getInstance()->allProductByService($_GET['id']);
     if ($products){
         http_response_code(201);
         echo json_encode($products);
