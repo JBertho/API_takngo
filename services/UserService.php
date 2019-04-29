@@ -39,7 +39,6 @@ class UserService
         ]);
 
         if($res){
-            //echo User::UserFromArray($res)->jsonSerialize();
             return User::UserFromArray($res);
         }
         return NULL;
@@ -51,17 +50,14 @@ class UserService
         $res = $manager->findOne('SELECT * FROM user WHERE email = ? and password = ?', [
             $email,$password
         ]);
-        if($res){
-            return User::UserFromArray($res);
-        }
-        return NULL;
+
+        return $res;
     }
     public function getUserRoles($id){
         $manager = DatabaseManager::getManager();
-        return $manager->getAll('SELECT * FROM user_role WHERE role_id = ?'[
+        $res =  $manager->getAll('SELECT * FROM user_role WHERE user_id = ?',[
             $id]);
-
-
+        return User::tradRoles($res);
     }
 
     /**public function link(Pass $p,Attraction $a): bool{

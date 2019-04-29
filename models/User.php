@@ -8,6 +8,15 @@
 
 class User implements JsonSerializable
 {
+    public static  $roles = [
+        1 => "ROLE_USER",
+        2 => "ROLE_ADMIN",
+        3 => "ROLE_SERVICE",
+        4 => "ROLE_ENTREPRISE",
+        5 =>  "ROLE_ABONNEMENT",
+        6 => "ROLE_DRIVER",
+    ];
+
     private $id;
     private $email;
     private $lastname;
@@ -99,6 +108,15 @@ class User implements JsonSerializable
     }
     public function setId($id){
         $this->id = $id;
+    }
+
+    public static function tradRoles($data){
+        $array = [];
+        foreach ($data as $one){
+            array_push($array,self::$roles[$one['role_id']]);
+        }
+        return $array;
+
     }
 
     /**
