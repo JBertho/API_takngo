@@ -48,6 +48,14 @@ class User implements JsonSerializable
         return NULL;
     }
 
+    /**
+     * @return int|null
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
 
 
 

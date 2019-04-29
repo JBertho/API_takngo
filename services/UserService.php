@@ -52,11 +52,18 @@ class UserService
             $email,$password
         ]);
         if($res){
-            //echo User::UserFromArray($res)->jsonSerialize();
             return User::UserFromArray($res);
         }
         return NULL;
     }
+    public function getUserRoles($id){
+        $manager = DatabaseManager::getManager();
+        return $manager->getAll('SELECT * FROM user_role WHERE role_id = ?'[
+            $id]);
+
+
+    }
+
     /**public function link(Pass $p,Attraction $a): bool{
         $manager = DatabaseManager::getManager();
         $affectedRows = $manager->exec('INSERT INTO pass_attraction(id_pass, id_attraction) VALUES (?,?)',[

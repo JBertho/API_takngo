@@ -2,14 +2,16 @@
 /**
  * Created by IntelliJ IDEA.
  * User: James
- * Date: 28/04/2019
- * Time: 15:57
+ * Date: 29/04/2019
+ * Time: 14:20
  */
 
-require_once __DIR__.'/../models/Product.php';
+require_once __DIR__.'/../models/Road.php';
+require_once __DIR__.'/../models/User.php';
 require_once __DIR__.'/../utils/databases/DatabaseManager.php';
 
-class ProductService
+
+class RoadService
 {
     private static $instance;
 
@@ -17,10 +19,10 @@ class ProductService
     {
     }
 
-    public static function getInstance(): ProductService
+    public static function getInstance(): RoadService
     {
         if (!isset(self::$instance)) {
-            self::$instance = new ProductService();
+            self::$instance = new RoadService();
         }
         return self::$instance;
     }
@@ -39,10 +41,16 @@ class ProductService
         return NULL;
     } */
 
-    public function allProductByService(int $id): array
+    public function allRoadWithoutDriver(): array
     {
         $manager = DatabaseManager::getManager();
-        return $manager->getAll('SELECT * FROM product WHERE service_id = ?',[
+        return $manager->getAll('SELECT * FROM road WHERE driver_id is null  ');
+
+    }
+    public function allRoadOfDriver(int $id): array
+    {
+        $manager = DatabaseManager::getManager();
+        return $manager->getAll('SELECT * FROM road WHERE driver_id = ?  ',[
             $id
         ]);
 
@@ -51,21 +59,31 @@ class ProductService
     public function getById(int $id)
     {
         $manager = DatabaseManager::getManager();
-        $res = $manager->findOne('SELECT * FROM product WHERE id = ?', [
+        $res = $manager->findOne('SELECT * FROM road WHERE id = ?', [
             $id
         ]);
         if($res){
-            return Product::ProductFromArray($res);
+            return Road::RoadFromArray($res);
         }
         return NULL;
     }
-    public function link(Pass $p,Attraction $a): bool{
+    public function setDriver(int $rId,int $uId){
+        $manager = DatabaseManager::getManager();
+        $affectedRows = $manager->exec('UPDATE road SET driver_id = ? WHERE id = ?',[
+            $uId,
+            $rId
+        ]);
+        return $affectedRows;
+    }
+
+    /*public function link(Pass $p,Attraction $a): bool{
         $manager = DatabaseManager::getManager();
         $affectedRows = $manager->exec('INSERT INTO pass_attraction(id_pass, id_attraction) VALUES (?,?)',[
             $p->getId(),
             $a->getId()
         ]);
         return $affectedRows !== 0;
-    }
+    } */
+
 
 }
