@@ -75,6 +75,14 @@ class RoadService
         ]);
         return $affectedRows;
     }
+    public function getClientName(int $id){
+        $manager = DatabaseManager::getManager();
+        $res = $manager->findOne('SELECT lastname,name,phone FROM user,orders,road WHERE user.id = orders.user_id AND road.orders_id = orders.id AND road.id = ?',[
+            $id
+        ]);
+        return $res;
+
+    }
 
     /*public function link(Pass $p,Attraction $a): bool{
         $manager = DatabaseManager::getManager();
