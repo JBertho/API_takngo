@@ -14,6 +14,7 @@ $json = json_decode($body,true); //true -> decode as array
 
 if (isset($_GET['id'])){
     $products = ProductService::getInstance()->allProductByService($_GET['id']);
+    echo json_encode($products);
     if ($products){
         http_response_code(201);
         echo json_encode($products);

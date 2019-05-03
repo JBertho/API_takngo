@@ -67,5 +67,24 @@ class ProductService
         ]);
         return $affectedRows !== 0;
     }
+    public function dropProduct($id){
+        $manager = DatabaseManager::getManager();
+        $affectedRows = $manager->exec('DELETE FROM product WHERE id= ?',[
+            $id
+        ]);
+        return $affectedRows !== 0;
+    }
+    public function updateProduct($id,$name,$price,$description,$pict,$duration_activity = null){
+        $manager = DatabaseManager::getManager();
+        $affectedRows = $manager->exec('UPDATE product SET name = ?,price = ?,description = ?, pict = ?, duration_activity = ? WHERE id = ?',[
+            $name,
+            $price,
+            $description,
+            $pict,
+            $duration_activity,
+            $id
+        ]);
+        return $affectedRows !== 0;
+    }
 
 }

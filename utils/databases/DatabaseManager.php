@@ -27,10 +27,7 @@ class DatabaseManager{
     private function internalExec(string $sql,array $params = []):?PDOStatement {
         $statement = $this->pdo->prepare($sql);
         if($statement !== false && $statement->execute($params)) {
-            if ($statement->execute($params)) {
-                return $statement;
-            }
-            print_r($statement->errorInfo()); // Faire afficher dans un fichier
+            return $statement;
         }
         return NULL;
     }
