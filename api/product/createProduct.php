@@ -22,12 +22,13 @@ if (isset($_POST['name']) and isset($_POST['price']) and isset($_POST['descripti
         mkdir("../../../takngo/public/images/product/".$_POST['service'],0777,true);
         umask($oldmask);
     }
-    $file = "../../../takngo/public/images/product/".$_POST['service']."/".uniqid().'.png';
+    $name = uniqid().'.png';
+    $file = "../../../takngo/public/images/product/".$_POST['service']."/".$name;
     $success = file_put_contents($file, $data);
     echo json_encode($img);
 
 
-    $product = ProductService::getInstance()->createProduct($_POST['name'],$_POST['price'],$_POST['description'],"../../images/".$_POST['service']."/".$file,$_POST['service']);
+    $product = ProductService::getInstance()->createProduct($_POST['name'],$_POST['price'],$_POST['description'],"../../images/".$_POST['service']."/".$name,$_POST['service']);
 
     if ($product == true){
         http_response_code(201);
