@@ -13,10 +13,10 @@ require_once __DIR__.'/../../utils/validator.php';
 if (isset($_POST['name']) and isset($_POST['price']) and isset($_POST['description']) and isset($_POST['pict']) and isset($_POST['service'])  ){
 
     $img = $_POST['pict'];
+    
     $data = base64_decode($img);
     $file = uniqid() . '.png';
-    $file = fopen('test.png',"w+");
-    fputs($file,imagecreatefromstring($data));
+    $success = file_put_contents($file, $data);
     echo json_encode($img);
 
 
