@@ -18,7 +18,7 @@ if (isset($_POST['name']) and isset($_POST['price']) and isset($_POST['descripti
     if(file_exists("../../../takngo/public/images/product/".$_POST['service']) == true ){
 
     }else{
-        mkdir("../../../takngo/public/images/product/".$_POST['service'],777,true);
+        mkdir("../../../takngo/public/images/product/".$_POST['service'],0777,true);
     }
     $file = "../../../takngo/public/images/product/".$_POST['service']."/".uniqid().'.png';
     $success = file_put_contents($file, $data);
