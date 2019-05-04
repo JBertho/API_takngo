@@ -86,5 +86,17 @@ class ProductService
         ]);
         return $affectedRows !== 0;
     }
+    public function createProduct($name,$price,$description,$pict,$service,$duration_activity = null){
+        $manager = DatabaseManager::getManager();
+        $affectedRows = $manager->exec('INSERT INTO product(name, price, description, service_id, pict, duration_activity  ) VALUES (?,?,?,?,?,?)',[
+            $name,
+            $price,
+            $description,
+            $service,
+            $pict,
+            $duration_activity
+        ]);
+        return $affectedRows !== 0;
+    }
 
 }
