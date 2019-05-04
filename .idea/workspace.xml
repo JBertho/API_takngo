@@ -53,15 +53,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/product/listByService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="das://8c8be239-9f9f-4077-92ab-d86a7d514545/schema/takngo/table/product">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -73,13 +64,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/product/createProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+            <state relative-caret-position="42">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding>
                 <element signature="e#6#92#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/product/5ccd8ba10a4aa.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -281,7 +277,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556974494213" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556974554182" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -337,12 +333,12 @@
       <workItem from="1556810426358" duration="6676000" />
       <workItem from="1556908041610" duration="6816000" />
       <workItem from="1556927640209" duration="971000" />
-      <workItem from="1556963799311" duration="7471000" />
+      <workItem from="1556963799311" duration="8129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73554000" />
+    <option name="totallyTimeSpent" value="74212000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,7 +358,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.50141644" side_tool="true" weight="0.09328859" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49858356" visible="true" weight="0.16040269" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49858356" visible="true" weight="0.16040269" />
       <window_info id="Structure" order="6" sideWeight="0.50141644" side_tool="true" weight="0.13087249" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.28045326" />
@@ -381,7 +377,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
       <window_info anchor="right" id="Maven" order="3" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.16308725" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.16308725" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.24966443" />
@@ -657,10 +653,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/product/5ccd8ba10a4aa.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/product/createProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+        <state relative-caret-position="42">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
           </folding>
