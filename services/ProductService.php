@@ -74,16 +74,26 @@ class ProductService
         ]);
         return $affectedRows !== 0;
     }
-    public function updateProduct($id,$name,$price,$description,$pict,$duration_activity = null){
+    public function updateProduct($id,$name,$price,$description,$pict,$modif,$duration_activity = null){
         $manager = DatabaseManager::getManager();
-        $affectedRows = $manager->exec('UPDATE product SET name = ?,price = ?,description = ?, pict = ?, duration_activity = ? WHERE id = ?',[
-            $name,
-            $price,
-            $description,
-            $pict,
-            $duration_activity,
-            $id
-        ]);
+        if ($modif == 1) {
+            $affectedRows = $manager->exec('UPDATE product SET name = ?,price = ?,description = ?, pict = ?, duration_activity = ? WHERE id = ?', [
+                $name,
+                $price,
+                $description,
+                $pict,
+                $duration_activity,
+                $id
+            ]);
+        }else{
+            $affectedRows = $manager->exec('UPDATE product SET name = ?,price = ?,description = ?,duration_activity = ? WHERE id = ?', [
+                $name,
+                $price,
+                $description,
+                $duration_activity,
+                $id
+            ]);
+        }
         return $affectedRows !== 0;
     }
     public function createProduct($name,$price,$description,$pict,$service,$duration_activity = null){
