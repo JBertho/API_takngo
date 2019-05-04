@@ -15,8 +15,9 @@ if (isset($_POST['name']) and isset($_POST['price']) and isset($_POST['descripti
     $img = $_POST['pict'];
     $data = base64_decode($img);
     $file = uniqid() . '.png';
-    $success = file_put_contents($file, $data);
-    echo json_encode($success);
+    $file = fopen('test.png',"w+");
+    fputs($file,imagecreatefromstring($data));
+    echo json_encode($img);
 
 
     $product = ProductService::getInstance()->createProduct($_POST['name'],$_POST['price'],$_POST['description'],"images/".$_POST['service']."/test.png",$_POST['service']);
