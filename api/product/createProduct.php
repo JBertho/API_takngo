@@ -15,12 +15,17 @@ if (isset($_POST['name']) and isset($_POST['price']) and isset($_POST['descripti
     $img = $_POST['pict'];
 
     $data = base64_decode($img);
-    $file = 'tesoo.png';
+    if(file_exists("../../../takngo/public/images/product/".$_POST['service']) == true ){
+
+    }else{
+        mkdir("../../../takngo/public/images/product/".$_POST['service'],777,true);
+    }
+    $file = uniqid().'.png';
     $success = file_put_contents($file, $data);
     echo json_encode($img);
 
 
-    $product = ProductService::getInstance()->createProduct($_POST['name'],$_POST['price'],$_POST['description'],"images/".$_POST['service']."/test.png",$_POST['service']);
+    $product = ProductService::getInstance()->createProduct($_POST['name'],$_POST['price'],$_POST['description'],"../../images/".$_POST['service']."/".$file,$_POST['service']);
 
     if ($product == true){
         http_response_code(201);
