@@ -20,7 +20,7 @@ if (isset($_POST['name']) and isset($_POST['price']) and isset($_POST['descripti
     }else{
         mkdir("../../../takngo/public/images/product/".$_POST['service'],777,true);
     }
-    $file = uniqid().'.png';
+    $file = "../../../takngo/public/images/product/".$_POST['service']."/".uniqid().'.png';
     $success = file_put_contents($file, $data);
     echo json_encode($img);
 

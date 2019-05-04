@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de71e01c-fc9d-4b65-a94a-09d61991d231" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/api/product/createProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/product/createProduct.php" afterDir="false" />
-    </list>
+    <list default="true" id="de71e01c-fc9d-4b65-a94a-09d61991d231" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="das://8c8be239-9f9f-4077-92ab-d86a7d514545/schema/takngo/table/product">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -61,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/product/createProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state relative-caret-position="378">
+              <caret line="27" column="156" selection-start-line="27" selection-start-column="156" selection-end-line="27" selection-end-column="156" />
               <folding>
                 <element signature="e#6#92#0#PHP" expanded="true" />
               </folding>
@@ -260,7 +258,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556985430645" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556985872095" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -316,12 +314,12 @@
       <workItem from="1556810426358" duration="6676000" />
       <workItem from="1556908041610" duration="6816000" />
       <workItem from="1556927640209" duration="971000" />
-      <workItem from="1556963799311" duration="15135000" />
+      <workItem from="1556963799311" duration="15418000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81218000" />
+    <option name="totallyTimeSpent" value="81501000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,7 +342,7 @@
       <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49858356" visible="true" weight="0.16040269" />
       <window_info id="Structure" order="6" sideWeight="0.50141644" side_tool="true" weight="0.13087249" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.24504249" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.24787535" />
       <window_info anchor="bottom" id="Database Changes" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
@@ -638,20 +636,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/product/createProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="27" column="156" selection-start-line="27" selection-start-column="156" selection-end-line="27" selection-end-column="156" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="das://8c8be239-9f9f-4077-92ab-d86a7d514545/schema/takngo/table/product">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/product/createProduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
